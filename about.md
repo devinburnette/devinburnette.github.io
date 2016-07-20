@@ -4,12 +4,14 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+DevOps Lead at the Flatiron School in Manhattan, NY
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+Email: [devin.burnette@gmail.com](mailto:devin.burnette@gmail.com)
+
+Twitter: [@IAmDevinaire](https://twitter.com/iamdevinaire)
+
+LinkedIn: [Devin Burnette](https://www.linkedin.com/in/devinburnette)
+
+GitHub: [devinburnette](https://github.com/devinburnette)
