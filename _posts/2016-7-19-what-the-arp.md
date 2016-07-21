@@ -11,7 +11,7 @@ So we began using the Floating IP feature to eliminate single points of failure 
 
 Almost flawless.
 
-Most of our insfrastructure is in Digital Ocean's NYC3 Data Center. We've recently expanded into San Francisco, Germany, and Bangalore Data Centers to give our customers a better experience that are geographically located. We have an endpoint that lives behind an HA proxy backend that gets called in order to authenticate users of our application from each of the four data centers listed above. Yesterday morning, we were alerted that some users connecting from the NYC3 region were not able to login to our application. Then the fun started.
+Most of our infrastructure is in Digital Ocean's NYC3 Data Center. We've recently expanded into San Francisco, Germany, and Bangalore Data Centers to give our customers a better experience that are geographically located. We have an endpoint that lives behind an HA proxy backend that gets called in order to authenticate users of our application from each of the four data centers listed above. Yesterday morning, we were alerted that some users connecting from the NYC3 region were not able to login to our application. Then the fun started.
 
 I began investigating by doing the typical outage triage stuff. You know, checking out logs and retarting everything. Nothing was working. Something like this happened intermittently one time when DNS got screwy, so I attempted flushing the DNS cache on the machine with `sudo service nscd restart`.
 
