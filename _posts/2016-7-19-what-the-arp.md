@@ -90,7 +90,7 @@ PING 159.203.114.xxx (159.203.114.xxx) 56(84) bytes of data.
 64 bytes from 159.203.114.xxx: icmp_seq=2 ttl=64 time=0.308 ms
 64 bytes from 159.203.114.xxx: icmp_seq=3 ttl=64 time=0.282 ms
 ^C
---- 159.203.114.78 ping statistics ---
+--- 159.203.114.xxx ping statistics ---
 3 packets transmitted, 3 received, 0% packet loss, time 1998ms
 rtt min/avg/max/mdev = 0.282/0.387/0.572/0.131 ms
 ```
