@@ -47,6 +47,7 @@ Internal Traceroute within the same subnet: (1 hop)
 ```
 devin@vm03:~$ traceroute lb04.fe.flatironschool.com
 traceroute to lb04.fe.flatironschool.com (159.203.114.xxx), 30 hops max, 60 byte packets
+ 1  * lb04.fe.flatironschool.com (159.203.114.xxx)  0.427 ms *
 ```
 
 External Traceroute between different data centers: (12 hops)
