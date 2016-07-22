@@ -102,7 +102,7 @@ devin@vm03:~$ ip neighbor | grep 159.203.114.xxx
 ```
 
 ```
-devin@vm03:~$ ip neighbor
+devin@vm03:~$ ip neighbor | grep 159.203.114.xxx
 159.203.114.xxx dev eth0 lladdr 04:01:be:xx:xx:xx REACHABLE
 ```
 
