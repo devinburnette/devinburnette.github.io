@@ -39,7 +39,7 @@ Now if I go check my prepared statements cache in my database, I see this:
    (0.3ms)  select * from pg_prepared_statements
  => [["a1", "SELECT  \"users\".* FROM \"users\" WHERE \"users\".\"email\" = $1 LIMIT 1", "2017-03-06 04:36:44.478737+00", "{text}", "f"]]`
 
- So this will keep an eye out for another query within the same session/connection that looks similar to this structure and bind the given variable to $1 if it matches the text data type.
+ So this will keep an eye out for another query within the same session/connection that looks similar to this structure and bind the given variable to `$1` if it matches the text data type.
 
 `User.find_by(email: 'bar@foo.com')`
 
@@ -78,7 +78,7 @@ Oh no! What's happening. If you look at the last 2 prepared statements you'll se
 
 Why is this bad? Well, every time we tell our database to remember a query, it takes up Memory. And remember, prepared statements are only shared within the same connection. So if you're using a multi-server environment with Unicorn or Passenger, it's likely the problem is exacerbated by the number of workers you're using to run your application. By default Rails will generate up to 1,000 prepared statements per connection and that's not a low number by any means. If you don't take precaution, this seamlessly hidden Active Record feature will manifest itself with a nasty Memory Leak occurring in your database ulimately crashing with Out Of Memory Errors.
 
-So what can you do? Well this is supposed to be fixed in Adequate Record, the new and improved ORM introduced with Rails 5. But until you're ready to make that move, if you're hitting memory limits on your database, there's a couple of configs you should be aware of. In your `config/database.yml` file, you can either lower the `statement_limit` (default: 1,000) for each connection or you can just disabled `prepared_statements` altogether if you like.
+So what can you do? Well this is supposed to be fixed in Adequate Record, the new and improved ORM introduced with Rails 5. But until you're ready to make that move, if you're hitting memory limits on your database, there's a couple of configs you should be aware of. In your `config/database.yml` file, you can either lower the `statement_limit` (default: 1,000) for each connection or you can just disable `prepared_statements` altogether if you like.
 
 `production:
   adapter: postgresql
